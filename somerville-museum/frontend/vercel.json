@@ -1,0 +1,13 @@
+{
+        "crons": [
+          {
+            "path": "/api/borrowManagement?action=overdue.js",
+            "schedule": "0 0 * * *"
+          },
+          {
+            "path": "/api/email?emailType=sendDueEmails",
+            "schedule": "0 0 * * *"
+          }
+        ]
+      }
+      

@@ -1,0 +1,40 @@
+/**************************************************************
+ *
+ *                     ExportDataBtn.css
+ *
+ *        Authors: Elisa Yu, Ari Goshtasby
+ *           Date: 03/30/2025
+ *
+ *     Summary: styling for the export button
+ * 
+ **************************************************************/
+.export-btn {
+    background-color: #9A525F;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .export-btn:hover {
+    background-color: #7c3c49;
+  }
+  
+  .export-btn-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+  }
+  
+  .export-icon {
+    stroke: white;
+  }

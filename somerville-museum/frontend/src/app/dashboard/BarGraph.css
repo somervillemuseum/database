@@ -1,0 +1,46 @@
+/*
+ * Authors: Will and Angie
+ * Sprint: Dashboard #44
+ * Component: BarGraph
+ * Purpose: This file contains the css for the BarGraph component.
+*/
+
+.bar {
+    align-items: center;
+    justify-content: center;
+    opacity: .8;
+}
+
+.gray-bar {
+    align-items: center;
+    justify-content: center;
+}
+
+.bar-label {
+    color: rgba(0, 0, 0, 0.70);
+    text-align: center;
+    font-family: Inter;
+    font-size: 1.2vh;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: .7;
+}
+
+.barGraphContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 100%;
+    height: 100%;
+    background: #FFF;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.svgContainer {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}

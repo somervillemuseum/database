@@ -1,0 +1,146 @@
+.settings-container {
+    display: flex;
+    justify-content: center;
+}
+
+.settings-header {
+  position: fixed;
+  top: 1.5rem;
+  left: 8rem;
+  z-index: 100;
+}
+
+.containerUpper {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-color: #F8F5F5;
+    position: relative;
+}
+
+.wrapper {
+    width: 20vw;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    overflow: visible;
+}
+
+.toggleWrapper {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+}
+
+.toggleInput {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggleSlider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.toggleSlider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+.toggleInput:checked + .toggleSlider {
+    background-color: var(--sm_red);
+}
+
+.toggleInput:checked + .toggleSlider:before {
+    transform: translateX(24px);
+}
+
+.toggleLabel {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    padding: 10px;
+    min-width: 140px;
+    transition: opacity 0.2s ease;
+    opacity: 1;
+}
+  
+.fading {
+    opacity: 0;
+}
+
+.Settings-Title {
+    position: absolute;
+    color: #000;
+    font-family: Akatab;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: -8rem;
+  }
+
+  .content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+    width: 100%;
+  }
+
+  .containerSettings {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100vh;
+    background-color: #F8F5F5;
+    position: relative; /* so Settings-Title is relative to this */
+  }
+  
+  .Settings-Title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #000;
+    font-family: Akatab;
+    font-size: 40px;
+    font-weight: 700;
+  }
+  
+  .settings-content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;  /* prevent width restriction */
+    height: 100%;
+  }
+
+  .global-settings-title {
+    position: fixed;  /* fixed instead of absolute */
+    top: 2rem;
+    left: 16rem;
+    z-index: 9999;  /* above everything */
+  }

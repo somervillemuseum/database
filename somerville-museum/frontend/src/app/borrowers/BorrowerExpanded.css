@@ -1,0 +1,177 @@
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: right;
+  align-items: flex-start;
+  z-index: 10000;
+  overflow-y: auto;
+
+}
+
+.titleTop {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  flex-direction: row;
+}
+
+.buttonsB {
+  display: flex;
+  flex-shrink: 0;
+  margin-left: auto;
+  margin-right: 20px;
+  gap: 10px;
+}
+
+.popup-anim-wrapper {
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.popup-anim-wrapper.slide-in {
+  animation-name: slideIn;
+}
+
+.popup-anim-wrapper.slide-out {
+  animation-name: slideOut;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+
+.popup {
+  background-color: white;
+  position: relative;
+  width: 33vw;
+  min-height: 100vh;
+  flex-direction: column;
+  text-align: left;
+  min-width: 450px;
+  padding: 1rem 1.5rem;
+  overflow-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  /* animation: slideIn 0.3s ease-out forwards; */
+
+}
+
+/* @keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+} */
+.name-and-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #9B525F; 
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+#borrowerHistory {
+  width: 100%;
+  border-collapse: separate; 
+  border-spacing: 0;
+  border: 1px solid #9B525F;
+  border-radius: 5px;
+  overflow: hidden; 
+  text-align: left;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-top: 10px;
+}
+
+#borrowerHistory th, #borrowerHistory td {
+  padding: 10px;
+  border-bottom: 1px solid #D9D9D9;
+}
+
+#borrowerHistory tr:last-child td {
+  border-bottom: none; 
+}
+
+.history-divider td {
+  border-bottom: 3px solid #9B525F;
+}
+
+.navigation-arrows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.nav-arrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #9B525F;
+  cursor: pointer;
+}
+
+#borrowerHistory {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+
+#borrowerHistory th {
+  text-align: left;
+  padding: 8px;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #ddd;
+}
+
+#borrowerHistory td {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.history-divider td {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.loading-history {
+  font-style: italic;
+  color: #666;
+  padding: 10px 0;
+}
