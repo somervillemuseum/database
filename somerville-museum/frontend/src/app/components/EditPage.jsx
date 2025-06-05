@@ -203,6 +203,21 @@ export default function EditPage({ unit }) {
             setPriceText(`$${numericValue.toFixed(2)}`);
         }
     };
+
+    const handleconditionOptionSelect = (selectedConditions) => {
+    
+        // Ensure selectedConditions is always an array
+        if (!Array.isArray(selectedConditions)) {
+            setconditionOption([]); // Set to empty array if selection is cleared
+            return;
+        }
+    
+        // Extract only names, handling undefined values safely
+        const selectedNames = selectedConditions.map(item => item?.name || "").filter(name => name !== "");
+    
+        // Update state
+        setconditionOption(selectedNames);
+    };
     
     // Function to handle color selection
     const handleColorSelect = (color) => {
